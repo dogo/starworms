@@ -26,7 +26,7 @@ public class No{
         prox = null;
     }		
 
-    // m√©todos de acesso	
+    // metodos de acesso	
     /**    *Retorna o Ret‚ngulo do No.   */ 
     public Rectangle Info(){
         return info;
@@ -43,7 +43,7 @@ public class No{
     public No Prox(){
         return prox;
     }		
-    // m√©todo modificador	
+    // metodo modificador	
     /**    *Reescre o Ret‚ngulo do No.   */ 
     public void NovoInfo(Rectangle x)
     {

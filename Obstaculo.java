@@ -8,7 +8,7 @@
  */
 import java.awt.*;
 
-class Obstaculo extends Main {
+class Obstaculo {
    
     /**    *Guarda o Retângulo e a Cor deste que será Desenhado.   */       
     No Obst;
@@ -21,12 +21,12 @@ class Obstaculo extends Main {
      * Desenha Retangulo com sua respectiva Cor.
     */    
     public void DesenhaRetangulo() {
-        Obst = ListaRect.BuscaLastRect();
+        Obst = Main.ListaRect.BuscaLastRect();
         rect = Obst.Info();
         cor = Obst.Cor();
         Color corAleatoria = new Color(cor[0],cor[1],cor[2]);
-        Fase.novoForegroundColour(corAleatoria);
-        Fase.pinta(rect);
+        Main.Fase.novoForegroundColour(corAleatoria);
+        Main.Fase.pinta(rect);
     }
     
 

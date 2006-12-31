@@ -10,7 +10,7 @@
 import java.awt.*;
 import javax.swing.ImageIcon;
 
-class Players extends Main {
+class Players { 
 
         private String nome;
         private boolean vez;
@@ -43,11 +43,11 @@ class Players extends Main {
         }
        
         public void Erase() {
-            Fase.apagaString(nome,pos[0],pos[1]-2);
+            Main.Fase.apagaString(nome,pos[0],pos[1]-2);
             Rectangle cont = new Rectangle(pos[0],pos[1],size[0],size[1]);
-            Fase.novoForegroundColour(Color.white);
-            Fase.pinta(cont);
-            Fase.desenha(cont);            
+            Main.Fase.novoForegroundColour(Color.white);
+            Main.Fase.pinta(cont);
+            Main.Fase.desenha(cont);            
         }
             
         public void Draw(int pos_x, int pos_y) {
@@ -67,12 +67,12 @@ class Players extends Main {
                 nomeArq= "player_esq.gif";
             }
             ImageIcon icon = new ImageIcon(nomeArq);
-            Fase.desenhaImage(icon.getImage(),pos[0],pos[1],size[0],size[1]);
+            Main.Fase.desenhaImage(icon.getImage(),pos[0],pos[1],size[0],size[1]);
             Rectangle contorno = new Rectangle(pos[0],pos[1],size[0],size[1]);
-            Fase.novoForegroundColour(Color.orange);
-            Fase.desenhaString(nome,pos[0],pos[1]-2);
-            Fase.desenha(contorno);
-            Fase.desenhaOval(OvalX,OvalY,30,30);
+            Main.Fase.novoForegroundColour(Color.orange);
+            Main.Fase.desenhaString(nome,pos[0],pos[1]-2);
+            Main.Fase.desenha(contorno);
+            Main.Fase.desenhaOval(OvalX,OvalY,30,30);
         }
         /**
          * Retorna a velocidade do player em seu pulo.

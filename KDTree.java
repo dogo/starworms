@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class KDTree extends Main {
+public class KDTree {
     private Rectangle info;
     
    public KDTree(ListaLigada ListaRect, int N) {
