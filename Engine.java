@@ -2,7 +2,9 @@ import java.awt.*;
 import java.io.*;
 
 /**    
- * Classe responsavel por ler arquivo onde esta a fase do jogo, chamar m�todo processaLinha para carreg�-la e depois chamar classe para arremessar a bola. */
+ * Classe responsavel por ler arquivo onde esta a fase do jogo, 
+ * chamar metodo processaLinha para carrega-la e depois chamar classe para arremessar a bola. 
+ */
 public class Engine extends Main{
     private int alt_larg;
     private int tam_linha;
