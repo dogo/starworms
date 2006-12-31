@@ -1,3 +1,13 @@
+/**
+ * Worms Tela  
+ * 
+ * @author Diogo Autilio.
+ * @version 0.3.1-alpha 
+ * Created (07/11/2006)
+ * last update : 29/11/06
+ */
+
+
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
@@ -5,7 +15,7 @@ import java.io.*;
 import javax.swing.BorderFactory;
 
 /**
- * Classe respons�vel por criar interface do jogo, controlar os movimentos do teclado e a leitura da fase.
+ * Classe responsavel por criar interface do jogo, controlar os movimentos do teclado e a leitura da fase.
  */
 public class Tela extends JFrame implements ActionListener {
     private boolean LeArq;
@@ -54,7 +64,7 @@ public class Tela extends JFrame implements ActionListener {
     private BorderLayout borderLayout1 = new BorderLayout();
     
     /**
-     * Constr�i toda a interface do Jogo.
+     * Constroi toda a interface do Jogo.
      */
     public Tela() {
         super("StarWorms 0.1.7-alpha");
@@ -179,7 +189,7 @@ public class Tela extends JFrame implements ActionListener {
         
         ButtonLoad.addActionListener(new ActionListener() {       
             /**
-             * Le Arquivo passado pelo usu�rio ap�s clique no Bot�o Carrega.
+             * Le Arquivo passado pelo usuario apos clique no Botao Carrega.
              */            
             public void actionPerformed(ActionEvent a) {
                 try {
@@ -291,7 +301,7 @@ public class Tela extends JFrame implements ActionListener {
    }
        
     /**
-     * Pinta na Tela todos as informa��es do jogo.
+     * Pinta na Tela todos as informacoes do jogo.
      */                    
     public void paint(Graphics g) {        
 
@@ -339,7 +349,7 @@ public class Tela extends JFrame implements ActionListener {
         }  
     /**
      * Chama metodo paint para redesenhar a tela do jogo.
-     * Acho que � aqui o problema das "piscadas", porque ele redesenha TUDO.
+     * Acho que eh aqui o problema das "piscadas", porque ele redesenha TUDO.
      */            
     public void repinta() {
         paint(this.getGraphics());
