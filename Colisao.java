@@ -1,5 +1,5 @@
 /**
- * Worms Colisão  
+ * Worms Colisao  
  * 
  * @author Diogo Autilio.
  * @version 0.3.1-alpha 
@@ -9,8 +9,10 @@
 
 
 import java.awt.*;
+import org.odejava.*; 
+
 public class Colisao {
-    /** Retorna True se o Projétil não atingiu o Retângulo, o Oponente e os Limites da Tela.   */ 
+    /** Retorna True se o Projetil nao atingiu o Retangulo, o Oponente e os Limites da Tela.   */ 
     public boolean Check(int x,int y,int AltProjetil,int distancia,Rectangle alvo, double VF, int Vo, int massa) {
         int TelaSizeX = Main.Fase.telaX();
         int TelaSizeY = Main.Fase.telaY();
@@ -46,7 +48,7 @@ public class Colisao {
         return true;
     }
     /**
-     * Retorna true se o player colidiu com algum obstáculo.
+     * Retorna true se o player colidiu com algum obstaculo.
      */
     public boolean Paredao(int x, int y, int Alt, int Larg) {
         No Obst = Main.ListaRect.BuscaFirstRect();
@@ -68,7 +70,7 @@ public class Colisao {
     }
     
     /**
-     * Retorna True se o player bateu de frente com algum obstáculo.
+     * Retorna True se o player bateu de frente com algum obstaculo.
      */
     public boolean BatidaFrente(int x, int y, int Alt, int Larg)    
     {
@@ -101,7 +103,7 @@ public class Colisao {
     }
     
     /**
-     * Retorna True se o player está em cima de algum obstáculo.
+     * Retorna True se o player esta em cima de algum obstaculo.
      */
     public boolean temChao(int x, int y, int Alt, int Larg)    
     {
