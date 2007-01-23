@@ -3,11 +3,11 @@
  */
 public class ConverteCor {
 
-    /**    *Guarda a quantidade de Cor Vermelha do Retângulo.   */       
+    /**    *Guarda a quantidade de Cor Vermelha do Retangulo.   */       
     int r;
-    /**    *Guarda a quantidade de Cor Verde do Retângulo.   */  
+    /**    *Guarda a quantidade de Cor Verde do Retangulo.   */  
     int g;
-    /**    *Guarda a quantidade de Cor Azul do Retângulo.   */  
+    /**    *Guarda a quantidade de Cor Azul do Retangulo.   */  
     int b;
     /**    *Vetor que guarda a cor dos Players em RGB.   */      
     int[] rgb = new int[3];
@@ -26,7 +26,7 @@ public class ConverteCor {
             short tempB = Short.parseShort(hexcode.substring(5,7),16); // BB
             b = tempB;
         }
-         // Caso tenha sido impossível converter de hexadecimal para short, 
+         // Caso tenha sido impossivel converter de hexadecimal para short, 
         catch (NumberFormatException nfe)  {
             r = g = b = 0;
         }
