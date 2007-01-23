@@ -1,12 +1,12 @@
-
+﻿
 /**    
- * Le o arquivo onde est� a fase do jogo.
+ * Le o arquivo onde esta a fase do jogo.
  */
 import java.awt.*;
 import java.io.*;
 
 public class Save {
-    public void salvaFile(DataOutputStream file) throws IOException { //Salva o jogo com o nome de um arquivo passado pelo usu�rio.
+    public void salvaFile(DataOutputStream file) throws IOException { //Salva o jogo com o nome de um arquivo passado pelo usuario.
         file.writeBytes("saved\n");
         file.writeBytes("tela "+Main.Fase.telaX()+" "+Main.Fase.telaY()+"\n");
         file.writeBytes("playersize "+Main.player1.Size()[0]+" "+Main.player1.Size()[1]+"\n");
