@@ -12,7 +12,7 @@ import javax.swing.ImageIcon;
 
 public class Projetil {
     
-    /**    *Controla o Lançamento do Projétil do Player a partir de sua velocidade e o ângulo.   */ 
+    /**    *Controla o Lançamento do Projetil do Player a partir de sua velocidade e o angulo.   */ 
     public void LancaProjetil(int Vo, int ang) {
         Colisao Colide = new Colisao();
         ImageIcon projetil = new ImageIcon("projetil_1.gif");    
@@ -40,7 +40,7 @@ public class Projetil {
         else {
             cord = Main.player2.Position();
             size = Main.player2.Size();
-            OrigemX=cord[0]+size[0]; // Origem do projétil sai da frente do player Direita.
+            OrigemX=cord[0]+size[0]; // Origem do projetil sai da frente do player Direita.
             OrigemY=cord[1];
             if(Main.player2.Lado()==true) {
                 OrigemX=cord[0]-distancia;
