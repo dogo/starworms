@@ -123,8 +123,8 @@ public class Engine extends Main{
         }        
     }
 
-    /**     *Recebe cada linha do TXT da fase, e em seguida verifica qual � a instru��o dela, fazendo que a cada execu��o carregue um
-     *      peda�o da Tela do Jogo.
+    /**     *Recebe cada linha do TXT da fase, e em seguida verifica qual eh a instrucao dela, fazendo que a cada execucao carregue um
+     *      pedaco da Tela do Jogo.
      */
     public void processaLinha(String linha) {
         tam_linha = linha.length();
