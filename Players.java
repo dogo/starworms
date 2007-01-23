@@ -56,7 +56,7 @@ class Players {
             String nomeArq="";
             int OvalY;
             int OvalX;
-            if(player_esq==true) { /**Se o personagem estï¿½ na direita, ele inverte o lado da saida do tiro**/ 
+            if(player_esq==true) { /**Se o personagem esta na direita, ele inverte o lado da saida do tiro**/ 
                 nomeArq= "player_dir.gif";
                 OvalX = pos_x + size[0]+5;
                 OvalY = pos_y + size[1];
@@ -82,7 +82,7 @@ class Players {
         }
 
         /**
-         * Retorna o ângulo do player em seu pulo.
+         * Retorna o angulo do player em seu pulo.
          */
         public int Angulo() {
             return angulo;
@@ -96,13 +96,13 @@ class Players {
         }
         
         /**
-         * Retorna true se for a Vez do player e false caso contrï¿½rio.
+         * Retorna true se for a Vez do player e false caso contrario.
          */
         public boolean Vez() {
             return vez;
         }    
         /**
-         * Retorna a posiï¿½ï¿½o do player na tela.
+         * Retorna a posicao do player na tela.
          */        
         public int[] Position(){           
             return pos;
@@ -123,7 +123,7 @@ class Players {
         }        
         
         /**
-         * Retorna o true se o player estï¿½ virado para a esquera e false se estï¿½ virado para a direita.
+         * Retorna o true se o player esta virado para a esquera e false se esta virado para a direita.
          */
         public boolean Lado(){
             return player_esq==true;
@@ -137,7 +137,7 @@ class Players {
             player_esq = esq;            
         }  
         /**
-         * Insere posiï¿½ï¿½o do player
+         * Insere posicao do player
          */
         public void NovaPosition(int x,int y){
             pos[0] = x;
