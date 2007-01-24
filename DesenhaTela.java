@@ -59,7 +59,7 @@ public class DesenhaTela {
     }
     
     /**
-     * Desenha os Retângulos na Tela.
+     * Desenha os Retï¿½ngulos na Tela.
      */    
     public void Retangulos(Graphics2D g) {
         No Obst = Main.ListaRect.BuscaFirstRect();       
@@ -76,7 +76,7 @@ public class DesenhaTela {
     }
     
     /**
-     * Retorna um vetor de String com o player que irá jogar, seu nome e o nome do adversário.
+     * Retorna um vetor de String com o player que ira jogar, seu nome e o nome do adversario.
      */
     public String[] PlayerVez() {
         String[] pvez = new String[3];
