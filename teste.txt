@@ -1,8 +1,8 @@
-tela 800 600 			
-playersize 55 55 		
+tela 633 400 		
+playersize 75 75 		
 hitpoints 5 			
-player1 50 365 			
-player2 465 365 		
+player1 60 300 
+player2 550 200 		
 turno 45 			
 projetil 40 20			
 rect 155 100 234 #ff0000
