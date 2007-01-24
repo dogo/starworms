@@ -200,7 +200,7 @@ public class Movimentacao {
     }
     
     /**
-     * Retorna True se o jogo já acabou, quando um player morre.
+     * Retorna True se o jogo ja acabou, quando um player morre.
      */
     public boolean GameOver() {
         if(Main.player1.SuaVida()==0 || Main.player2.SuaVida()==0)

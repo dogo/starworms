@@ -10,9 +10,9 @@ import java.awt.*;
 
 class Obstaculo {
    
-    /**    *Guarda o Retângulo e a Cor deste que será Desenhado.   */       
+    /**    *Guarda o Retangulo e a Cor deste que sera Desenhado.   */       
     No Obst;
-    /**    *Guarda o Retângulo a ser Desenha na Tela.   */       
+    /**    *Guarda o Retangulo a ser Desenha na Tela.   */       
     Rectangle rect;
     /**    *Vetor que guarda a cor dos Players em RGB.   */       
     int[] cor;

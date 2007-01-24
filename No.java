@@ -10,7 +10,7 @@ public class No{
     private int massa;
     
     // construtores
-    /**    *Constrói um No.   */ 
+    /**    *Constroi um No.   */ 
     public No()
     {
         info = new Rectangle();
@@ -18,7 +18,7 @@ public class No{
         massa=0;
 //         rgb = null;
     }
-    /**    *Constrói um No com um Retângulo e uma Cor.   */     
+    /**    *Constroi um No com um Retangulo e uma Cor.   */     
     public No (Rectangle x, int[] cor, int m){
         info = x;
         rgb = cor;
@@ -27,7 +27,7 @@ public class No{
     }		
 
     // metodos de acesso	
-    /**    *Retorna o Retângulo do No.   */ 
+    /**    *Retorna o Retangulo do No.   */ 
     public Rectangle Info(){
         return info;
     }		
@@ -44,7 +44,7 @@ public class No{
         return prox;
     }		
     // metodo modificador	
-    /**    *Reescre o Retângulo do No.   */ 
+    /**    *Reescre o Retangulo do No.   */ 
     public void NovoInfo(Rectangle x)
     {
         info = x;

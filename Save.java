@@ -1,4 +1,3 @@
-﻿
 /**    
  * Le o arquivo onde esta a fase do jogo.
  */

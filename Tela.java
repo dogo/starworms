@@ -160,7 +160,7 @@ public class Tela extends JFrame implements ActionListener {
         
         ButtonSave.addActionListener(new ActionListener() {            
             /**
-             * Salva o estado do jgo num arquivo.
+             * Salva o estado do jogo num arquivo.
              */            
             public void actionPerformed(ActionEvent a){
                 try {
@@ -248,18 +248,18 @@ public class Tela extends JFrame implements ActionListener {
                             ang = ang + 1;       
                             
                             if(vez[0].equals("player1"))
-                                TxtAng_1.setText(ang+"°");
+                                TxtAng_1.setText(ang+"Â°");
                             else
-                                TxtAng_2.setText(ang+"°");
+                                TxtAng_2.setText(ang+"Â°");
                             break;
                     case KeyEvent.VK_DOWN:
                             if(ang==1)
                                 ang=2;
                             ang = ang - 1;
                             if(vez[0].equals("player1"))
-                                TxtAng_1.setText(ang+"°");
+                                TxtAng_1.setText(ang+"Â°");
                             else
-                                TxtAng_2.setText(ang+"°");
+                                TxtAng_2.setText(ang+"Â°");
                             break;                    
             }
         }                          

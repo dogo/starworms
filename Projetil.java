@@ -12,7 +12,7 @@ import javax.swing.ImageIcon;
 
 public class Projetil {
     
-    /**    *Controla o Lançamento do Projetil do Player a partir de sua velocidade e o angulo.   */ 
+    /**    *Controla o Lancamento do Projetil do Player a partir de sua velocidade e o angulo.   */ 
     public void LancaProjetil(int Vo, int ang) {
         Colisao Colide = new Colisao();
         ImageIcon projetil = new ImageIcon("projetil_1.gif");    
@@ -21,13 +21,13 @@ public class Projetil {
         int[] cord;
         int[] size;
         int distancia = LargProjetil;
-        int OrigemX; // Origem do projétil sai da frente do player a Esquerda.
+        int OrigemX; // Origem do projetil sai da frente do player a Esquerda.
         int OrigemY;
         Rectangle alvo;
         if(Main.player1.Vez()==true) {
             cord = Main.player1.Position();
             size = Main.player1.Size();
-            OrigemX=cord[0]+size[0]; // Origem do projétil sai da frente do player Direita.
+            OrigemX=cord[0]+size[0]; // Origem do projetil sai da frente do player Direita.
             OrigemY=cord[1];
             if(Main.player1.Lado()==true) {
                 OrigemX=cord[0]-distancia;
@@ -56,7 +56,7 @@ public class Projetil {
 //        double vP;
         double Vox = Vo * Math.cos(Math.toRadians(ang));
         double Voy = Vo * Math.sin(Math.toRadians(ang));
-        double x=OrigemX,y=OrigemY;     // posição na tela        
+        double x=OrigemX,y=OrigemY;     // posicao na tela        
         int atrito = 8;
 //        int m2 = player1.MassaRect();
         int massa = Main.player1.MassaProjetil();
@@ -75,7 +75,7 @@ public class Projetil {
 //            vP = ((massa - m2)/(massa + m2)*vf);
             Main.Fase.desenhaImage(projetil.getImage(),(int)x,(int)y);            
             t = t + 0.1;
-            /**Apaga os prejeteis que ficaram para tras, ja foi calculado não deixando "rastro" do projetil**/ 
+            /**Apaga os prejeteis que ficaram para tras, ja foi calculado nao deixando "rastro" do projetil**/ 
             Main.Fase.repinta();
             Main.Fase.espera(10);
         }
