@@ -9,13 +9,13 @@ public class ListaLigada {
     private int lado;
     private int tamanho;
     
-    /**    *Constrói uma Lista Ligada de No com cabeça.   */
+    /**    *Constroi uma Lista Ligada de No com cabeï¿½a.   */
     public ListaLigada() {
         cabeca = new No();
         fim = aux = cabeca;
     }
     
-    /**    *Insere um Retângulo e sua respectiva Cor na Lista Ligada.   */
+    /**    *Insere um Retangulo e sua respectiva Cor na Lista Ligada.   */
     public void Insere(Rectangle rect,int[] cor, int massa) {
         No novo_rect = new No(rect,cor,massa);
         if(ListaVazia())
@@ -46,12 +46,12 @@ public class ListaLigada {
         return aux2;
     }
 
-    /**    *Busca e Retorna o último No da Lista Lista Ligada.   */        
+    /**    *Busca e Retorna o ultimo No da Lista Lista Ligada.   */        
     public No BuscaLastRect()  {
         return fim;
     }      
 
-    /**    *Recebe um Retângulo e Remove o No da Lista Ligada que contém ele.   */        
+    /**    *Recebe um Retangulo e Remove o No da Lista Ligada que contem ele.   */        
     public void Remove(Rectangle r) {
         No aux2 = cabeca.Prox();
         aux = cabeca;
@@ -69,7 +69,7 @@ public class ListaLigada {
         aux = cabeca;
     }    
     
-    /**    *Retorna True se Lista estiver Vazia e False caso contrário.   */ 
+    /**    *Retorna True se Lista estiver Vazia e False caso contrario.   */ 
     public boolean ListaVazia() {
         if(cabeca.Prox()==null)
             return true;
