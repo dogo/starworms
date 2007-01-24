@@ -1,7 +1,5 @@
 import java.awt.*;
-/**
- * 
- */
+
 public class No{
 
     private Rectangle info;
