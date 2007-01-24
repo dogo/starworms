@@ -31,7 +31,7 @@ public class Engine extends Main{
                 if(linha==null)
                     break;
                 GameSaved(linha);
-            /**PAra Debug do GameSaved**/
+     /**Para Debug do GameSaved**/
             //System.out.println(linha);
             //System.out.println("Aki Acaba o debug do GameSaved !");
             }
@@ -41,7 +41,7 @@ public class Engine extends Main{
                     if(linha==null)
                         break;
                         processaLinha(linha);
-            /**Para Debug**/
+     /**Para Debug**/
             //System.out.println("Aki Comeca o debug do ProcessaLinha !");
             //System.out.println(linha);
             linha = buffer.readLine();            
