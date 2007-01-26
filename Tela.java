@@ -248,18 +248,18 @@ public class Tela extends JFrame implements ActionListener {
                             ang = ang + 1;       
                             
                             if(vez[0].equals("player1"))
-                                TxtAng_1.setText(ang+"Â°");
+                                TxtAng_1.setText(ang+"°");
                             else
-                                TxtAng_2.setText(ang+"Â°");
+                                TxtAng_2.setText(ang+"°");
                             break;
                     case KeyEvent.VK_DOWN:
                             if(ang==1)
                                 ang=2;
                             ang = ang - 1;
                             if(vez[0].equals("player1"))
-                                TxtAng_1.setText(ang+"Â°");
+                                TxtAng_1.setText(ang+"°");
                             else
-                                TxtAng_2.setText(ang+"Â°");
+                                TxtAng_2.setText(ang+"°");
                             break;                    
             }
         }                          
