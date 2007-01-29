@@ -15,7 +15,7 @@ public class Projetil {
     /**    *Controla o Lancamento do Projetil do Player a partir de sua velocidade e o angulo.   */ 
     public void LancaProjetil(int Vo, int ang) {
         Colisao Colide = new Colisao();
-        ImageIcon projetil = new ImageIcon("projetil_1.gif");    
+        ImageIcon projetil = new ImageIcon (getClass().getResource("images/projetil_1.gif"));    
         int AltProjetil = projetil.getIconHeight()+1;
         int LargProjetil = projetil.getIconWidth()+1;
         int[] cord;
