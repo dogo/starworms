@@ -23,11 +23,11 @@ public class DesenhaTela {
         g.setColor(Color.orange);
         g.drawString(Main.player1.Nome(),Main.player1.Position()[0],Main.player1.Position()[1]-2);
         if(Main.player1.Lado())
-            nomeArq = "player1_esq.gif";
+            nomeArq = "images/player1_esq.gif" ; 
         else
-            nomeArq = "player1_dir.gif";
+            nomeArq = "images/player1_dir.gif";
             
-        ImageIcon icon = new ImageIcon(nomeArq);
+        ImageIcon icon = new ImageIcon ( getClass().getResource(nomeArq));
         int[] size = new int[2];
         size[0] = icon.getIconHeight();
         size[1] = icon.getIconWidth();
@@ -44,11 +44,11 @@ public class DesenhaTela {
         g.setColor(Color.orange);
         g.drawString(Main.player2.Nome(),Main.player2.Position()[0],Main.player2.Position()[1]-2);
         if(Main.player2.Lado())
-            nomeArq = "player2_esq.gif";
+            nomeArq = "images/player2_esq.gif";
         else
-            nomeArq = "player2_dir.gif";
+            nomeArq = "images/player2_dir.gif";
             
-        ImageIcon icon = new ImageIcon(nomeArq);
+        ImageIcon icon = new ImageIcon( getClass().getResource(nomeArq));
         int[] size = new int[2];
         size[0] = icon.getIconHeight();
         size[1] = icon.getIconWidth();
@@ -59,7 +59,7 @@ public class DesenhaTela {
     }
     
     /**
-     * Desenha os Ret�ngulos na Tela.
+     * Desenha os Retangulos na Tela.
      */    
     public void Retangulos(Graphics2D g) {
         No Obst = Main.ListaRect.BuscaFirstRect();       
