@@ -104,7 +104,7 @@ public class Engine extends Main{
             alt_larg = Integer.parseInt(linhas[2]);
             Main.player1.MassaProjetil(m);
             Main.player1.Raio(alt_larg);
-            System.out.println(alt_larg);
+            //System.out.println(alt_larg);( debug velho )
         }           
          else if(linhas[0].equals("rect")) {
             int x = Integer.parseInt(linhas[1]);

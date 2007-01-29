@@ -67,7 +67,7 @@ public class Tela extends JFrame implements ActionListener {
      * Constroi toda a interface do Jogo.
      */
     public Tela() {
-        super("StarWorms 0.1.7-alpha");
+        super("StarWorms 0.1.7.4-alpha");
         this.setContentPane(jPanel1);
         
         LeArq = false;
@@ -248,18 +248,18 @@ public class Tela extends JFrame implements ActionListener {
                             ang = ang + 1;       
                             
                             if(vez[0].equals("player1"))
-                                TxtAng_1.setText(ang+"°");
+                                TxtAng_1.setText(ang+"ï¿½");
                             else
-                                TxtAng_2.setText(ang+"°");
+                                TxtAng_2.setText(ang+"ï¿½");
                             break;
                     case KeyEvent.VK_DOWN:
                             if(ang==1)
                                 ang=2;
                             ang = ang - 1;
                             if(vez[0].equals("player1"))
-                                TxtAng_1.setText(ang+"°");
+                                TxtAng_1.setText(ang+"ï¿½");
                             else
-                                TxtAng_2.setText(ang+"°");
+                                TxtAng_2.setText(ang+"ï¿½");
                             break;                    
             }
         }                          
