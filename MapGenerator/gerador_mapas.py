@@ -25,6 +25,7 @@ Last time updated: 29/01/2007
 
 Changelog :
 
+v0.1
 (Bruno Gola - 26/01/2007):
 Erro na verificao dos players no mapa.
 
@@ -40,27 +41,70 @@ Estava gravando errado a posicao dos players
 (Diogo Autilio - 26/01/2007):
 Botao para fechar 
 
+v0.2
 (Diogo Autilio - 29/01/2007):
 Tamanho do projetil estava errado.
 
+(Bruno Gola - 29/01/2007):
+Inserida uma dialog onde o usuario escolhe a altura e largura antes de desenhar o cenario.
 
 Features :
 
-* Usuario poderá escolher o tamanho do obstaculo.
-* Usuario podera escolher o tamanho da tela.
+* Usuario poder� escolher o tamanho do obstaculo.
 
 Created by Bruno Fialho Marques Gola 
-Send any comments, bug fixes, requests and money to < brunogola@gmail.com >.
-Send any comments, bug fixes to < diogo.autilio@gmail.com >
+Send any comments, bugs, fixes, requests and money to < brunogola@gmail.com >.
+Send any comments, bugs, fixes to < diogo.autilio@gmail.com >.
 
 """
 
+
+import sys
+
+# eagle:
 from eagle import *
 
-# Definindo tamanho dos objetos e a altura/largura da tela.
+# Globais:
+#global TELA_W
+#global TELA_H
+TELA_W = 0
+TELA_H = 0
+# fim 
+
+def set_altura(app,wid,alt):
+    global TELA_H
+    TELA_H=alt
+
+def set_largura(app,wid,larg):
+    global TELA_W
+    TELA_W=larg
+
+def ok(app,wid):
+    global TELA_W,TELA_H
+    try:
+        TELA_W = int(TELA_W)
+        TELA_H = int(TELA_H)
+    except ValueError:
+        print "ERRO: o(s) valor(s) inserido(s) nao eh/sao inteiro(s)."
+        sys.exit()
+    app.close()
+
+App(
+    title="Digite a altura e a largura da tela :",
+    window_size=(400,125),
+    center=(
+        Entry(id='altura',label="Altura: ",callback=set_altura),
+        Entry(id='largura',label='Largura: ', callback=set_largura),
+        Button(id='ok',label='Ok',callback=ok),
+    ),
+)
+
+run()
+
+if not TELA_W or not TELA_H:
+    sys.exit()
+# Definindo tamanho dos objetos
 TAMANHO = 30
-TELA_W = 800
-TELA_H = 600
 
 # Cabecalho do arquivo de mapa
 headers =[
@@ -138,6 +182,7 @@ def seleciona_p2(app,wid,img):
     seleciona_p2.img = img
 
 def gera_mapa(app,wid):
+    print (mouse_callback.p1,mouse_callback.p2)
     if not mouse_callback.p1 or not mouse_callback.p2:
         if not yesno("Voce nao colocou todos os personagens,\n se salvar agora, o mapa nao ira funcionar.\n Deseja prosseguir?"):
             return
@@ -173,15 +218,15 @@ def fechar(app, wid):
 color_chooser.cor_atual = (255,0,0)
 
 App(
-    title="Gerador de mapas para starWorms",
+    title="Gerador de mapas para starWorms v0.2",
     top = (
         RichText(id="text",
-            text="Selecione a imagem dos players e desenhe o mapa no Canvas abaixo.<br><b>Mouse 1</b>: Insere o Player1<br><b>Mouse 2</b>: Insere o Player2<br><b>Botão do meio</b>: Insere um Obstáculo"
+            text="Selecione a imagem dos players e desenhe o mapa no Canvas abaixo.<br><b>Mouse 1</b>: Insere o Player1<br><b>Mouse 2</b>: Insere o Player2<br><b>Botao do meio</b>: Insere um Obstaculo"
         )
     ),
     center=(
         Canvas( id="canvas",
-            width=800, height=600,
+            width=TELA_W, height=TELA_H,
             callback=mouse_callback,
             bgcolor='blue'
         ),
@@ -189,7 +234,7 @@ App(
         OpenFileButton(id="p2_selector",callback=seleciona_p2),
         Color(id="color_selector",callback=color_chooser,color='red'),
         Button(id="ok",label="Gerar Arquivo de Cenário",callback=gera_mapa),
-        Button(id="apaga",label="Apagar cenário",callback=apaga_tudo),
+        Button(id="apaga",label="Apagar cenario",callback=apaga_tudo),
 	Button(id="fechar",label="Fechar",callback=fechar),
     )
         
