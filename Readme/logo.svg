@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.44.1"
+   width="210mm"
+   height="297mm"
+   sodipodi:docbase="/home/biohazard/starworms"
+   sodipodi:docname="logo.svg">
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs5" />
+  <sodipodi:namedview
+     inkscape:window-height="693"
+     inkscape:window-width="1024"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="0.38674898"
+     inkscape:cx="372.04724"
+     inkscape:cy="524.88826"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:current-layer="svg2" />
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot1871"
+     style="font-size:36px"
+     transform="translate(-12.92828,2.585656)"><flowRegion
+       id="flowRegion1873"><rect
+         id="rect1875"
+         width="698.12726"
+         height="165.48201"
+         x="31.027878"
+         y="67.227066"
+         style="font-size:36px" /></flowRegion><flowPara
+       id="flowPara1877"
+       style="font-size:64px;text-align:center;text-anchor:middle;font-family:Bitstream Charter">StarWorms</flowPara></flowRoot>  <image
+     y="26.798695"
+     x="19.041779"
+     id="image1937"
+     height="176.52586"
+     width="186.86848"
+     sodipodi:absref="/home/biohazard/starworms/player1_dir.gif"
+     xlink:href="player1_dir.gif" />
+  <image
+     y="26.79875"
+     x="551.68707"
+     id="image2003"
+     height="184.28282"
+     width="179.11151"
+     sodipodi:absref="/home/biohazard/starworms/player2_esq.gif"
+     xlink:href="player2_esq.gif" />
+  <path
+     sodipodi:type="star"
+     id="path2006"
+     sodipodi:sides="5"
+     sodipodi:cx="129.28282"
+     sodipodi:cy="387.84848"
+     sodipodi:r1="41.451225"
+     sodipodi:r2="20.725613"
+     sodipodi:arg1="1.6332151"
+     sodipodi:arg2="2.2615337"
+     inkscape:flatsided="false"
+     inkscape:rounded="0"
+     inkscape:randomized="0"
+     d="M 126.69717,429.21898 L 116.07842,403.82329 L 89.138124,398.17356 L 110.00948,380.22683 L 107.05769,352.85923 L 130.57565,367.16323 L 155.69163,355.89885 L 149.35517,382.68594 L 167.8295,403.09177 L 140.39539,405.34311 L 126.69717,429.21898 z "
+     style="fill:red"
+     transform="matrix(0.637383,0.534302,-0.589937,0.525934,676.7061,-215.4911)"
+     inkscape:transform-center-x="95.700082"
+     inkscape:transform-center-y="85.458592" />
+  <path
+     sodipodi:type="star"
+     style="fill:blue"
+     id="path2012"
+     sodipodi:sides="5"
+     sodipodi:cx="227.53777"
+     sodipodi:cy="605.04364"
+     sodipodi:r1="36.014027"
+     sodipodi:r2="18.007013"
+     sodipodi:arg1="1.2036225"
+     sodipodi:arg2="1.831941"
+     inkscape:flatsided="false"
+     inkscape:rounded="0"
+     inkscape:randomized="0"
+     d="M 240.46605,638.65717 L 222.8886,622.44013 L 199.56445,627.72632 L 209.55605,605.99783 L 197.32103,585.44877 L 221.07362,588.23687 L 236.83611,570.25067 L 241.52442,593.7023 L 263.50119,603.13527 L 242.64614,614.84107 L 240.46605,638.65717 z "
+     transform="translate(10.34263,-424.0477)" />
+</svg>
