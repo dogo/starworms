@@ -4,7 +4,7 @@
  * @author Diogo Autilio.
  * @version 0.3.1-alpha 
  * Created (07/11/2006)
- * last update : 29/11/06
+ * last update : 29/02/07
  */
 
 
@@ -193,7 +193,7 @@ public class Tela extends JFrame implements ActionListener {
              */            
             public void actionPerformed(ActionEvent a) {
                 try {
-                    //Tenta abrir o arquivo para leitura                                
+                    //Tenta abrir o arquivo para leitura                  
                     FileReader leitor = new FileReader(TxtArq.getText());
                     Engine i= new Engine();
                     i.LeArq(leitor);
