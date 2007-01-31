@@ -18,21 +18,21 @@ Changelog:
     *	Troca de toda a estrutura Canvas para Swing.
     *	Retirado o uso de IOHelper.
     *	Retirado o SimpleWriter e SimpleReader
-    *	Adicionado a opção de Salvar o jogo em qualquer momento, para posterior carregamento do jogo salvo.
+    *	Adicionado a opcao de Salvar o jogo em qualquer momento, para posterior carregamento do jogo salvo.
     *	Adicionado eventos de teclado para controlar os personagens.
-    *	Adicionado Botão “Quit”, para sair do jogo.
+    *	Adicionado Botao Quit, para sair do jogo.
     *	Melhorias em toda GUI.
 
 0.1.7-alpha (28/12/2006)
 
-    *	Adicionado a ação de “Pulo” para os players.
+    *	Adicionado a acao de Pulo para os players.
     *	Adicionado o uso de SVN para controle do projeto.
-    *	Removidos a maioria das Heranças das Classes.
+    *	Removidos a maioria das Herancas das Classes.
 
 0.1.7.1-alpha (20/01/2007)
 
     *	Adicionado o logo ao Changelog.
-    *	Adicionado Figuras com a explicação das teclas.
+    *	Adicionado Figuras com a explicacao das teclas.
 
 0.1.7.4-alpha (29/01/2007)
 
@@ -49,8 +49,8 @@ Bug[003]-Jump bug
 Features:
 
     *	Melhora no algoritmo para repintar a tela.
-    *	Implementação de Background.
-    *	Implementação de Sons.
-    *	Implementação de Vento.
-    *	Troca da Física implementada pela ODEJava.
+    *	Implementacao de Background.
+    *	Implementacao de Sons.
+    *	Implementacao de Vento.
+    *	Troca da Fi�sica implementada pela ODEJava.
     *	Melhoras na GUI.
