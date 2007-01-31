@@ -5,7 +5,7 @@ Autor: Diogo Autilio : biohazard <thug life>
 Data: 16/10/2006
 
 Send any comments, bugs, fixes, requests and money to < diogo.autilio@gmail.com >.
-Send any comments, bugs, fixes to < brunogola@gmail.com >, < bruno.stape@gmail.com >
+Send any comments, bugs, fixes to < brunogola@gmail.com >, < bruno.stape@gmail.com >.
 
 Changelog:
 
@@ -17,7 +17,7 @@ Changelog:
 
     *	Troca de toda a estrutura Canvas para Swing.
     *	Retirado o uso de IOHelper.
-    *	Retirado o SimpleWriter e SimpleReader
+    *	Retirado o SimpleWriter e SimpleReader.
     *	Adicionado a opcao de Salvar o jogo em qualquer momento, para posterior carregamento do jogo salvo.
     *	Adicionado eventos de teclado para controlar os personagens.
     *	Adicionado Botao Quit, para sair do jogo.
@@ -27,17 +27,18 @@ Changelog:
 
     *	Adicionado a acao de Pulo para os players.
     *	Adicionado o uso de SVN para controle do projeto.
-    *	Removidos a maioria das Herancas das Classes.
+    *	Removida a maioria das Herancas das Classes.
 
 0.1.7.1-alpha (20/01/2007)
 
-    *	Adicionado o logo ao Changelog.
+    *	Adicionado o logo ao Readme.
     *	Adicionado Figuras com a explicacao das teclas.
 
-0.1.7.4-alpha (29/01/2007)
+0.1.7.5-alpha (29/01/2007)
 
     *	Arrumado o Path das imagens ao gerar o JAR.
     *	Arrumado o tamanho dos players dentro dos arquivos de fase.
+    *   Arrumado o Path das fases ao gerar o JAR. ( Agradecimentos a "simu" pela dica )
 
 Known Issues :
 http://code.google.com/p/starworms/issues/list
@@ -52,5 +53,5 @@ Features:
     *	Implementacao de Background.
     *	Implementacao de Sons.
     *	Implementacao de Vento.
-    *	Troca da Fi­sica implementada pela ODEJava.
+    *	Troca da Fisica implementada pela ODEJava.
     *	Melhoras na GUI.

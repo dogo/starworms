@@ -13,6 +13,7 @@ import java.awt.event.*;
 import java.awt.*;
 import java.io.*;
 import javax.swing.BorderFactory;
+import java.net.URL;
 
 /**
  * Classe responsavel por criar interface do jogo, controlar os movimentos do teclado e a leitura da fase.
@@ -67,7 +68,7 @@ public class Tela extends JFrame implements ActionListener {
      * Constroi toda a interface do Jogo.
      */
     public Tela() {
-        super("StarWorms 0.1.7.4-alpha");
+        super("StarWorms 0.1.7.5-alpha");
         this.setContentPane(jPanel1);
         
         LeArq = false;
@@ -99,7 +100,7 @@ public class Tela extends JFrame implements ActionListener {
         ButtonQuit.setBounds(new Rectangle(535, 5, 100, 20));
 
         LabelNome_1.setText("StormTrooper");
-        LabelNome_1.setBounds(new Rectangle(5, 5, 80, 20));
+        LabelNome_1.setBounds(new Rectangle(5, 5, 90, 20));
         LabelLife_1.setText("Life:");
         LabelLife_1.setBounds(new Rectangle(5, 5, 80, 80));
         LabelVida_1.setText("");
@@ -192,17 +193,26 @@ public class Tela extends JFrame implements ActionListener {
              * Le Arquivo passado pelo usuario apos clique no Botao Carrega.
              */            
             public void actionPerformed(ActionEvent a) {
-                try {
-                    //Tenta abrir o arquivo para leitura                  
-                    FileReader leitor = new FileReader(TxtArq.getText());
-                    Engine i= new Engine();
-                    i.LeArq(leitor);
+            //Tenta abrir o arquivo para leitura                
+                String name = "levels/"+TxtArq.getText();  
+                URL resource = getClass().getResource(name);  
+                if (resource == null) {
+                    JOptionPane.showMessageDialog(null,"Erro ao tentar carregar a fase!","Erro",JOptionPane.INFORMATION_MESSAGE);
+                    //System.out.println(name + " not found");  DEBUG
+                return;  
+                }
+                String path = resource.getFile();  
+                //System.out.println(path);  DEBUG
+                try {  
+                    Reader leitor = new InputStreamReader(resource.openStream());  
+                    Engine i= new Engine();  
+                    i.LeArq(leitor);  
                     leitor.close();
                     startTime();
-                    jPanel1.requestFocus();
-                }
-                catch (IOException q) {
-                    JOptionPane.showMessageDialog(null,"Erro ao tentar carregar a fase!","Erro",JOptionPane.INFORMATION_MESSAGE);
+                    jPanel1.requestFocus(); 
+                    } 
+                catch (Exception e) {  
+                    e.printStackTrace();  
                 }
             }
         });
@@ -248,36 +258,47 @@ public class Tela extends JFrame implements ActionListener {
                             ang = ang + 1;       
                             
                             if(vez[0].equals("player1"))
-                                TxtAng_1.setText(ang+"�");
+                                TxtAng_1.setText(ang+"°");
                             else
-                                TxtAng_2.setText(ang+"�");
+                                TxtAng_2.setText(ang+"°");
                             break;
                     case KeyEvent.VK_DOWN:
                             if(ang==1)
                                 ang=2;
                             ang = ang - 1;
                             if(vez[0].equals("player1"))
-                                TxtAng_1.setText(ang+"�");
+                                TxtAng_1.setText(ang+"°");
                             else
-                                TxtAng_2.setText(ang+"�");
+                                TxtAng_2.setText(ang+"°");
                             break;                    
             }
         }                          
             public void keyReleased(KeyEvent e) {
                 switch (e.getKeyCode()) {
                     case KeyEvent.VK_ENTER:
-                            try {
-                                //Tenta abrir o arquivo para leitura                               
-                                FileReader leitor = new FileReader(TxtArq.getText());
-                                Engine i= new Engine();
-                                i.LeArq(leitor);
-                                leitor.close();
-                                startTime();
-                            }
-                            catch (IOException q) {
-                                JOptionPane.showMessageDialog(null,"Erro ao tentar carregar a fase!","Erro",JOptionPane.INFORMATION_MESSAGE);
-                            }
-                            break;
+                    //Tenta abrir o arquivo para leitura                
+                        String name = "levels/"+TxtArq.getText();  
+                        URL resource = getClass().getResource(name);  
+                        if (resource == null) {
+                            JOptionPane.showMessageDialog(null,"Erro ao tentar carregar a fase!","Erro",JOptionPane.INFORMATION_MESSAGE);
+                            //System.out.println(name + " not found");  DEBUG
+                        return;  
+                        }   
+                        String path = resource.getFile();  
+                        //System.out.println(path);  DEBUG
+                        try {  
+                            Reader leitor = new InputStreamReader(resource.openStream());  
+                            Engine i= new Engine();  
+                            i.LeArq(leitor);  
+                            leitor.close();
+                            startTime();
+                            jPanel1.requestFocus(); 
+                        } 
+                        catch (Exception k) {  
+                            k.printStackTrace();  
+                        }
+                        break;
+               
                     case KeyEvent.VK_SPACE:
                             if(vez[0].equals("player1"))
                                 TxtVelo_1.setText(velo+" M/s");

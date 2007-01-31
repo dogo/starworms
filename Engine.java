@@ -1,3 +1,12 @@
+/**
+ * Worms Engine  
+ * 
+ * @author Diogo Autilio.
+ * @version 0.4.2-alpha 
+ * Created (03/09/2006)
+ * last update : 31/02/07
+ */
+
 import java.awt.*;
 import java.io.*;
 
@@ -21,7 +30,7 @@ public class Engine extends Main{
     /**
      * Le o arquivo passado pelo usuario e chama o metodo para carregar a fase.
      */
-    public void LeArq(FileReader leitor) throws IOException  {
+    public void LeArq(Reader leitor) throws IOException  {
         BufferedReader buffer = new BufferedReader(leitor);
         Main.Fase.LeArq(true);
         String linha = buffer.readLine();
