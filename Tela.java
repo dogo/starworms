@@ -24,6 +24,7 @@ public class Tela extends JFrame implements ActionListener {
     private int ang= 1;
     private int tempo= 0; 
     private String[] vez;
+    private String arq;
     private javax.swing.Timer time;
     private Movimentacao teclas = new Movimentacao();
     
@@ -68,7 +69,7 @@ public class Tela extends JFrame implements ActionListener {
      * Constroi toda a interface do Jogo.
      */
     public Tela() {
-        super("StarWorms 0.1.7.5-alpha");
+        super("StarWorms 0.1.7.6-alpha");
         this.setContentPane(jPanel1);
         
         LeArq = false;
@@ -194,6 +195,21 @@ public class Tela extends JFrame implements ActionListener {
              */            
             public void actionPerformed(ActionEvent a) {
             //Tenta abrir o arquivo para leitura                
+                File arq = new File(TxtArq.getText());
+                if (arq.exists()) { //Checa se o arquivo existe.
+                    try{
+                     FileReader leitor = new FileReader(TxtArq.getText());  
+                     Engine i= new Engine();  
+                     i.LeArq(leitor);  
+                     leitor.close();  
+                     startTime();  
+                     jPanel1.requestFocus();
+                    }
+                catch (IOException q) {  
+                    JOptionPane.showMessageDialog(null,"Erro ao tentar carregar a fase!","Erro",JOptionPane.INFORMATION_MESSAGE);  
+                } 
+                }
+                else{
                 String name = "levels/"+TxtArq.getText();  
                 URL resource = getClass().getResource(name);  
                 if (resource == null) {
@@ -201,7 +217,7 @@ public class Tela extends JFrame implements ActionListener {
                     //System.out.println(name + " not found");  DEBUG
                 return;  
                 }
-                String path = resource.getFile();  
+                //String path = resource.getFile();  
                 //System.out.println(path);  DEBUG
                 try {  
                     Reader leitor = new InputStreamReader(resource.openStream());  
@@ -214,7 +230,7 @@ public class Tela extends JFrame implements ActionListener {
                 catch (Exception e) {  
                     e.printStackTrace();  
                 }
-            }
+            }}
         });
         
         TxtArq.addActionListener(new ActionListener(){   
@@ -276,7 +292,22 @@ public class Tela extends JFrame implements ActionListener {
             public void keyReleased(KeyEvent e) {
                 switch (e.getKeyCode()) {
                     case KeyEvent.VK_ENTER:
-                    //Tenta abrir o arquivo para leitura                
+                //Tenta abrir o arquivo para leitura                
+                        File arq = new File(TxtArq.getText());
+                        if (arq.exists()) { //Checa se o arquivo existe.
+                            try{
+                                FileReader leitor = new FileReader(TxtArq.getText());  
+                                Engine i= new Engine();  
+                                i.LeArq(leitor);  
+                                leitor.close();  
+                                startTime();  
+                                jPanel1.requestFocus();
+                            }
+                            catch (IOException q) {  
+                                JOptionPane.showMessageDialog(null,"Erro ao tentar carregar a fase!","Erro",JOptionPane.INFORMATION_MESSAGE);  
+                            } 
+                }    
+                    else{             
                         String name = "levels/"+TxtArq.getText();  
                         URL resource = getClass().getResource(name);  
                         if (resource == null) {
@@ -284,7 +315,7 @@ public class Tela extends JFrame implements ActionListener {
                             //System.out.println(name + " not found");  DEBUG
                         return;  
                         }   
-                        String path = resource.getFile();  
+                        //String path = resource.getFile();  
                         //System.out.println(path);  DEBUG
                         try {  
                             Reader leitor = new InputStreamReader(resource.openStream());  
@@ -296,7 +327,7 @@ public class Tela extends JFrame implements ActionListener {
                         } 
                         catch (Exception k) {  
                             k.printStackTrace();  
-                        }
+                        }}
                         break;
                
                     case KeyEvent.VK_SPACE:

@@ -39,6 +39,9 @@ Changelog:
     *	Arrumado o Path das imagens ao gerar o JAR.
     *	Arrumado o tamanho dos players dentro dos arquivos de fase.
     *   Arrumado o Path das fases ao gerar o JAR. ( Agradecimentos a "simu" pela dica )
+    
+0.1.7.6-alpha (02/02/2007)
+    *   Arrumado o Path das fases salvas serem carregadas.
 
 Known Issues :
 http://code.google.com/p/starworms/issues/list
