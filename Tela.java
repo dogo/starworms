@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Worms Tela  
  * 
  * @author Diogo Autilio.
@@ -69,7 +69,7 @@ public class Tela extends JFrame implements ActionListener {
      * Constroi toda a interface do Jogo.
      */
     public Tela() {
-        super("StarWorms 0.1.7.6-alpha");
+        super("StarWorms 0.1.7.8-alpha");
         this.setContentPane(jPanel1);
         
         LeArq = false;
