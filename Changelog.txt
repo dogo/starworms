@@ -43,6 +43,9 @@ Changelog:
 0.1.7.6-alpha (02/02/2007)
     *   Arrumado o Path das fases salvas serem carregadas.
 
+0.1.7.8-aplha (28/04/2007)
+    *   Adicionado Sons ao jogo.
+
 Known Issues :
 http://code.google.com/p/starworms/issues/list
 
@@ -54,7 +57,7 @@ Features:
 
     *	Melhora no algoritmo para repintar a tela.
     *	Implementacao de Background.
-    *	Implementacao de Sons.
+    *	Implementacao de Sons.   ( Done )
     *	Implementacao de Vento.
     *	Troca da Fisica implementada pela ODEJava.
     *	Melhoras na GUI.
