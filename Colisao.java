@@ -9,7 +9,7 @@
 
 
 import java.awt.*;
-import org.odejava.*; 
+//import org.odejava.*; 
 
 public class Colisao {
     /** Retorna True se o Projetil nao atingiu o Retangulo, o Oponente e os Limites da Tela.   */ 
