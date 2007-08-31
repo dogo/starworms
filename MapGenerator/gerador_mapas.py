@@ -113,7 +113,7 @@ headers =[
         ["hitpoints","5"],
         ["player1"],
         ["player2"],
-	["turno","45"],
+		["turno","45"],
         ["projetil","40",str(TAMANHO)]
 ]
         
