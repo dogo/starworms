@@ -50,7 +50,7 @@ Inserida uma dialog onde o usuario escolhe a altura e largura antes de desenhar 
 
 Features :
 
-* Usuario poder· escolher o tamanho do obstaculo.
+* Usuario podera escolher o tamanho do obstaculo.
 
 Created by Bruno Fialho Marques Gola 
 Send any comments, bugs, fixes, requests and money to < brunogola@gmail.com >.
@@ -233,7 +233,7 @@ App(
         OpenFileButton(id="p1_selector",callback=seleciona_p1),
         OpenFileButton(id="p2_selector",callback=seleciona_p2),
         Color(id="color_selector",callback=color_chooser,color='red'),
-        Button(id="ok",label="Gerar Arquivo de Cen√°rio",callback=gera_mapa),
+        Button(id="ok",label="Gerar Arquivo de Cenario",callback=gera_mapa),
         Button(id="apaga",label="Apagar cenario",callback=apaga_tudo),
 	Button(id="fechar",label="Fechar",callback=fechar),
     )
