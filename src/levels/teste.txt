@@ -1,0 +1,16 @@
+tela 633 400 		
+playersize 55 55 		
+hitpoints 5 			
+player1 60 300 
+player2 550 200 		
+turno 45 			
+projetil 40 20			
+rect 155 100 234 #ff0000
+rect 113 327 294 #80eca7
+rect 353 182 179 #a65011
+rect 210 133 279 #fff600
+rect 300 240 20 #1eb411
+rect 300 260 20 #1eb411
+rect 300 280 20 #1eb411
+rect 300 300 20 #1eb411
+rect 210 133 279 #fff600
