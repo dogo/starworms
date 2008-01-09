@@ -4,7 +4,7 @@
  * @author Diogo Autilio.
  * @version 0.3.1-alpha 
  * Created (07/10/2006)
- * last update : 20/11/06
+ * last update : 09/02/2008
  */
 
 
@@ -12,6 +12,9 @@ import java.awt.*;
 //import org.odejava.*; 
 
 public class Colisao {
+	
+	Som sons = new Som();
+	
     /** Retorna True se o Projetil nao atingiu o Retangulo, o Oponente e os Limites da Tela.   */ 
     public boolean Check(int x,int y,int AltProjetil,int distancia,Rectangle alvo, double VF, int Vo, int massa) {
         int TelaSizeX = Main.Fase.telaX();
@@ -30,6 +33,7 @@ public class Colisao {
                 double PorcVo = Math.abs(Vo) * 0.3;
                 if(VR > PorcVo) {
                 	Main.ListaRect.Remove(Obst.Info());
+                	sons.explode();
                     return false;
                 }
                 return false;
@@ -43,6 +47,7 @@ public class Colisao {
             else {
             	Main.player1.Dano();
            }
+            sons.acerta();
             return false;
         }
         return true;

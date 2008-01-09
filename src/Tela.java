@@ -27,7 +27,10 @@ public class Tela extends JFrame implements ActionListener {
     private String arq;
     private javax.swing.Timer time;
     private Movimentacao teclas = new Movimentacao();
+    private Som musica_fundo = new Som();
+    private Som som_eventos = new Som();
     
+    private Image FundoTela = Toolkit.getDefaultToolkit().getImage("fundo5.jpg");
     private BorderFactory borda;
     private JPanel jPanel1 = new JPanel();
     private JPanel painelDesenho = new JPanel();
@@ -69,7 +72,7 @@ public class Tela extends JFrame implements ActionListener {
      * Constroi toda a interface do Jogo.
      */
     public Tela() {
-        super("StarWorms 0.1.7.8-alpha");
+        super("StarWorms 0.1.8.0-alpha");
         this.setContentPane(jPanel1);
         
         LeArq = false;
@@ -257,6 +260,7 @@ public class Tela extends JFrame implements ActionListener {
                             teclas.movePlayer("player_esq.gif",-5,0);
                             break; 
                     case KeyEvent.VK_CONTROL:
+                    		som_eventos.pula();
                         	teclas.pulaPlayer();
                         	break;
                     case KeyEvent.VK_SPACE:
@@ -300,7 +304,8 @@ public class Tela extends JFrame implements ActionListener {
                                 Engine i= new Engine();  
                                 i.LeArq(leitor);  
                                 leitor.close();  
-                                startTime();  
+                                startTime(); 
+                                musica_fundo.toca();
                                 jPanel1.requestFocus();
                             }
                             catch (IOException q) {  
@@ -344,6 +349,7 @@ public class Tela extends JFrame implements ActionListener {
                             velo = 0;
                             ang = 1;
                             tempo = teclas.Atirou();
+                            som_eventos.explode();
                             break;
                 }
             }
@@ -361,7 +367,8 @@ public class Tela extends JFrame implements ActionListener {
         DesenhaTela desenha = new DesenhaTela();
         Rectangle[] vida;
         if(LeArq==false)
-            return;           
+            return;
+        desenhaImage(FundoTela,0,0,painelDesenho.getWidth(),painelDesenho.getHeight());
         vida = desenha.Barra();
         LabelVida_1.setBounds(vida[0]);
         LabelVida_2.setBounds(vida[1]);            
@@ -398,7 +405,13 @@ public class Tela extends JFrame implements ActionListener {
         LabelVida_2.setBorder(borda.createLineBorder(Color.black));
         desenha.Player1(graphic);
         desenha.Player2(graphic);
-        }  
+        }
+    
+    public void update(Graphics g)
+    {
+        paint(g);
+    }
+    
     /**
      * Chama metodo paint para redesenhar a tela do jogo.
      * Acho que eh aqui o problema das "piscadas", porque ele redesenha TUDO.

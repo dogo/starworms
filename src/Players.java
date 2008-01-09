@@ -32,6 +32,8 @@ class Players {
             massa=0;
             player_dir = false;
             player_esq = false;
+            velocidade=0;
+            angulo=0;
             pos = new int[2];
             nome="";   
             vez = false;
@@ -135,14 +137,32 @@ class Players {
         public void MudaLado(boolean esq, boolean dir){
             player_dir = dir;
             player_esq = esq;            
-        }  
+        }
+        
+        /**
+         * Insere velocidade ao player
+         */
+        public void NovaVelocidade(int v)
+        {
+            velocidade = v;
+        }
+        
         /**
          * Insere posicao do player
          */
         public void NovaPosition(int x,int y){
             pos[0] = x;
             pos[1] = y;
-        }         
+        }     
+        
+        /**
+         * Insere Angulo do player
+         */
+        public void NovoAngulo(int a)
+        {
+            angulo = a;
+        }  
+        
         /**
          * Insere tamanho do player
          */
