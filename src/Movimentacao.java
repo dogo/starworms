@@ -82,7 +82,7 @@ public class Movimentacao {
             Vox = Vo * Math.cos(Math.toRadians(ang));
             Voy = Vo * Math.sin(Math.toRadians(ang));
 
-            double g=10;   // gravidade
+            double g=9.8;   // gravidade
             double t = 0.1;   // tempo
             double x,y;
             boolean batida=false;
@@ -136,7 +136,7 @@ public class Movimentacao {
             Vox = Vo * Math.cos(Math.toRadians(ang));
             Voy = Vo * Math.sin(Math.toRadians(ang));
 
-            double g=10;   // gravidade
+            double g=9.8;   // gravidade
             double t = 0.1;   // tempo
             double x,y;
             boolean batida=false;

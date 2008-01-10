@@ -19,6 +19,7 @@ import java.net.URL;
  * Classe responsavel por criar interface do jogo, controlar os movimentos do teclado e a leitura da fase.
  */
 public class Tela extends JFrame implements ActionListener {
+	
     private boolean LeArq;
     private int velo= 0;
     private int ang= 1;
@@ -207,6 +208,7 @@ public class Tela extends JFrame implements ActionListener {
                      leitor.close();  
                      startTime();  
                      jPanel1.requestFocus();
+                     musica_fundo.toca();
                     }
                 catch (IOException q) {  
                     JOptionPane.showMessageDialog(null,"Erro ao tentar carregar a fase!","Erro",JOptionPane.INFORMATION_MESSAGE);  
@@ -283,6 +285,8 @@ public class Tela extends JFrame implements ActionListener {
                                 TxtAng_2.setText(ang+"°");
                             break;
                     case KeyEvent.VK_DOWN:
+                        	som_eventos = new Som();
+                        	som_eventos.explode();
                             if(ang==1)
                                 ang=2;
                             ang = ang - 1;
@@ -328,6 +332,7 @@ public class Tela extends JFrame implements ActionListener {
                             i.LeArq(leitor);  
                             leitor.close();
                             startTime();
+                            musica_fundo.toca();
                             jPanel1.requestFocus(); 
                         } 
                         catch (Exception k) {  
@@ -368,11 +373,10 @@ public class Tela extends JFrame implements ActionListener {
         Rectangle[] vida;
         if(LeArq==false)
             return;
-        desenhaImage(FundoTela,0,0,painelDesenho.getWidth(),painelDesenho.getHeight());
-        vida = desenha.Barra();
-        LabelVida_1.setBounds(vida[0]);
-        LabelVida_2.setBounds(vida[1]);            
-        graphic = (Graphics2D)painelDesenho.getGraphics(); 
+        desenhaImage(FundoTela,0,0,painelDesenho.getWidth(),painelDesenho.getHeight());    
+        graphic = (Graphics2D)painelDesenho.getGraphics();
+        desenha.Player1(graphic);
+        desenha.Player2(graphic);
         desenha.Retangulos(graphic);
         vida = desenha.Barra();
         vez = desenha.PlayerVez();
@@ -403,8 +407,6 @@ public class Tela extends JFrame implements ActionListener {
         LabelVida_2.setBackground(Color.green);   
         LabelVida_1.setBorder(borda.createLineBorder(Color.black));
         LabelVida_2.setBorder(borda.createLineBorder(Color.black));
-        desenha.Player1(graphic);
-        desenha.Player2(graphic);
         }
     
     public void update(Graphics g)
@@ -417,9 +419,10 @@ public class Tela extends JFrame implements ActionListener {
      * Acho que eh aqui o problema das "piscadas", porque ele redesenha TUDO.
      */            
     public void repinta() {
-        paint(this.getGraphics());
-       if(teclas.GameOver()==true) {       
-            LabelVez_1.setText("");
+    	
+    	paint(this.getGraphics());
+    	if(teclas.GameOver()==true) {       
+    		LabelVez_1.setText("");
             LabelVez_2.setText("");            
             LabelTempo.setText("");            
             if(teclas.Winner().equals("player1")){
