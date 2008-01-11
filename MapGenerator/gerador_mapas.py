@@ -39,7 +39,7 @@ Faltava o campo "Turno"
 Estava gravando errado a posicao dos players 
 
 (Diogo Autilio - 26/01/2007):
-Botao para fechar 
+Adicionado botao "Fechar" 
 
 v0.2
 (Diogo Autilio - 29/01/2007):
@@ -47,6 +47,10 @@ Tamanho do projetil estava errado.
 
 (Bruno Gola - 29/01/2007):
 Inserida uma dialog onde o usuario escolhe a altura e largura antes de desenhar o cenario.
+
+v0.2.1
+(Diogo Autilio - 11/01/2008):
+Adicionado campo "playerspeed", usado para os pulos.
 
 Features :
 
@@ -110,6 +114,7 @@ TAMANHO = 30
 headers =[
         ["tela",str(TELA_W),str(TELA_H)],
         ["playersize","55","55"],
+        ["playerspeed","40","45"],
         ["hitpoints","5"],
         ["player1"],
         ["player2"],
@@ -218,7 +223,7 @@ def fechar(app, wid):
 color_chooser.cor_atual = (255,0,0)
 
 App(
-    title="Gerador de mapas para starWorms v0.2",
+    title="Gerador de mapas para starWorms v0.2.1",
     top = (
         RichText(id="text",
             text="Selecione a imagem dos players e desenhe o mapa no Canvas abaixo.<br><b>Mouse 1</b>: Insere o Player1<br><b>Mouse 2</b>: Insere o Player2<br><b>Botao do meio</b>: Insere um Obstaculo"
