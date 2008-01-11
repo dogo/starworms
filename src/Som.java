@@ -14,7 +14,7 @@ public class Som extends Thread{
     
     public void toca()
     {
-        java.net.URL url = getClass().getResource("sounds/som1.wav");
+        java.net.URL url = getClass().getResource("sounds/fundo.mid");
         AudioClip som = Applet.newAudioClip(url);
         som.loop();
     }

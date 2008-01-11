@@ -31,7 +31,7 @@ public class Tela extends JFrame implements ActionListener {
     private Som musica_fundo = new Som();
     private Som som_eventos = new Som();
     
-    private Image FundoTela = Toolkit.getDefaultToolkit().getImage("fundo5.jpg");
+    private Image background = Toolkit.getDefaultToolkit().getImage("fundo5.jpg");
     private BorderFactory borda;
     private JPanel jPanel1 = new JPanel();
     private JPanel painelDesenho = new JPanel();
@@ -79,7 +79,7 @@ public class Tela extends JFrame implements ActionListener {
         LeArq = false;
         painelDesenho.setBackground(Color.white);
         painelDesenho.setForeground(Color.black);
-        painelDesenho.setLayout(flowLayout1);        
+        painelDesenho.setLayout(flowLayout1); 
         
         jPanel1.setBackground(SystemColor.menu);
         jPanel1.setLayout(borderLayout1);
@@ -373,7 +373,7 @@ public class Tela extends JFrame implements ActionListener {
         Rectangle[] vida;
         if(LeArq==false)
             return;
-        desenhaImage(FundoTela,0,0,painelDesenho.getWidth(),painelDesenho.getHeight());    
+        desenhaImage(background,0,0,painelDesenho.getWidth(),painelDesenho.getHeight());    
         graphic = (Graphics2D)painelDesenho.getGraphics();
         desenha.Player1(graphic);
         desenha.Player2(graphic);
