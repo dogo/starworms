@@ -1,5 +1,6 @@
 tela 633 400 		
-playersize 55 55 		
+playersize 55 55 
+playerspeed 40 45		
 hitpoints 5 			
 player1 60 300 
 player2 550 200 		

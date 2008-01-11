@@ -10,11 +10,9 @@ Send any comments, bugs, fixes to < brunogola@gmail.com >, < bruno.stape@gmail.c
 Changelog:
 
 0.0.1-alpha (16/10/2006)
-
     *	Release inicial
 
 0.1.3-alpha (29/11/2006)
-
     *	Troca de toda a estrutura Canvas para Swing.
     *	Retirado o uso de IOHelper.
     *	Retirado o SimpleWriter e SimpleReader.
@@ -24,18 +22,15 @@ Changelog:
     *	Melhorias em toda GUI.
 
 0.1.7-alpha (28/12/2006)
-
-    *	Adicionado a acao de Pulo para os players.
+    *	Adicionado a açao de Pulo para os players.
     *	Adicionado o uso de SVN para controle do projeto.
     *	Removida a maioria das Herancas das Classes.
 
 0.1.7.1-alpha (20/01/2007)
-
     *	Adicionado o logo ao Readme.
     *	Adicionado Figuras com a explicacao das teclas.
 
 0.1.7.5-alpha (29/01/2007)
-
     *	Arrumado o Path das imagens ao gerar o JAR.
     *	Arrumado o tamanho dos players dentro dos arquivos de fase.
     *   Arrumado o Path das fases ao gerar o JAR. ( Agradecimentos a "simu" pela dica )
@@ -43,12 +38,12 @@ Changelog:
 0.1.7.6-alpha (02/02/2007)
     *   Arrumado o Path das fases salvas serem carregadas.
 
-0.1.7.7-aplha (28/04/2007)
+0.1.7.7-alpha (28/04/2007)
     *   Add game sounds.
     *	Reestrurado o SVN.
     
-0.1.8.0-aplha (09/01/2008)
-    *	Add Backgorund.
+0.1.8.0-alpha (09/01/2008)
+    *	Add Backgorund. ( Working )
     *	Minor Bug Fixes
     *	Jump Fix.
 
@@ -57,13 +52,11 @@ http://code.google.com/p/starworms/issues/list
 
 Bug[001]-Key pressed bug (space bar).
 Bug[002]-In the collision 	 
-Bug[003]-Jump bug
 
 Features:
 
     *	Melhora no algoritmo para repintar a tela.
     *	Implementacao de Background. ( Working )
-    *	Implementacao de Sons.   ( Done )
     *	Implementacao de Vento.
     *	Troca da Fisica implementada pela ODEJava.
     *	Melhoras na GUI.

@@ -15,6 +15,8 @@ import java.io.*;
  * chamar metodo processaLinha para carrega-la e depois chamar classe para arremessar a bola. 
  */
 public class Engine extends Main{
+    private int velocidade=0;
+    private int angulo=0;
     private int alt_larg;
     private int tam_linha;
     private String[] linhas;
@@ -23,9 +25,9 @@ public class Engine extends Main{
     
     public Engine(){
         retangulos = 0;
-        Main.ListaRect = new ListaLigada();
         Main.player1 = new Players();
         Main.player2 = new Players();
+        Main.ListaRect = new ListaLigada();
     }   
     /**
      * Le o arquivo passado pelo usuario e chama o metodo para carregar a fase.
@@ -63,6 +65,7 @@ public class Engine extends Main{
      */
      public void GameSaved(String linha) {
         tam_linha = linha.length();
+        linha = linha.replace("/","");
         linhas = new String[tam_linha];
         linhas = linha.split("\\s+");
         
@@ -77,6 +80,25 @@ public class Engine extends Main{
             Main.player1.NovoSize(x,y);
             Main.player2.NovoSize(x,y);
         }      
+        else if(linhas[0].equals("playerspeed"))
+        {
+            //velocidade e angulo para salto
+            velocidade = Integer.parseInt(linhas[1]);
+            angulo = Integer.parseInt(linhas[2]);
+            
+            Main.player1.NovoAngulo(angulo);
+            Main.player1.NovaVelocidade(velocidade);
+            
+            Main.player2.NovoAngulo(angulo);
+            Main.player2.NovaVelocidade(velocidade);
+        }
+        else if(linhas[0].equals("playersize"))
+        {
+            int x = Integer.parseInt(linhas[1]);
+            int y = Integer.parseInt(linhas[2]);
+            player1.NovoSize(x,y);
+            player2.NovoSize(x,y);
+        } 
         else if(linhas[0].equals("hitpoints")) {
             int h = Integer.parseInt(linhas[1]);
             Main.player1.Durabilidade(h);
@@ -128,7 +150,7 @@ public class Engine extends Main{
             Main.ListaRect.Length(retangulos);
             Obstaculo Obst = new Obstaculo();
             Obst.DesenhaRetangulo();
-            retangulos= retangulos + 1;
+            retangulos++;
         }        
     }
 
@@ -152,6 +174,18 @@ public class Engine extends Main{
             Main.player1.NovoSize(x,y);
             Main.player2.NovoSize(x,y);
         }        
+		else if(linhas[0].equals("playerspeed"))
+        {
+            //velocidade e ângulo para salto
+            velocidade = Integer.parseInt(linhas[1]);
+            angulo = Integer.parseInt(linhas[2]);
+            
+            Main.player1.NovoAngulo(angulo);
+            Main.player1.NovaVelocidade(velocidade);
+            
+            Main.player2.NovoAngulo(angulo);
+            Main.player2.NovaVelocidade(velocidade);
+        }
         else if(linhas[0].equals("hitpoints")) {
             int h = Integer.parseInt(linhas[1]);
             Main.player1.Durabilidade(h);
@@ -193,7 +227,7 @@ public class Engine extends Main{
             Main.ListaRect.Length(retangulos);            
             Obstaculo Obst = new Obstaculo();
             Obst.DesenhaRetangulo();
-            retangulos= retangulos +1;
+            retangulos++;
         }
     }
 }

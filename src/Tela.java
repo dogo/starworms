@@ -40,6 +40,7 @@ public class Tela extends JFrame implements ActionListener {
     private JPanel painelDir = new JPanel();    
     private FlowLayout flowLayout1 = new FlowLayout();
     Graphics2D graphic;
+	private Color backgroundColour;
     private JButton ButtonLoad = new JButton();
     private JButton ButtonSave = new JButton();
     private JButton ButtonQuit = new JButton();
