@@ -257,10 +257,10 @@ public class Tela extends JFrame implements ActionListener {
             public void keyPressed(KeyEvent e) {
                 switch (e.getKeyCode()) {
                     case KeyEvent.VK_RIGHT:
-                            teclas.movePlayer("player_dir.gif",5,0);
+                            teclas.movePlayer(Main.PLAYER_RIGHT,5,0);
                             break;
                     case KeyEvent.VK_LEFT:
-                            teclas.movePlayer("player_esq.gif",-5,0);
+                            teclas.movePlayer(Main.PLAYER_LEFT,-5,0);
                             break; 
                     case KeyEvent.VK_CONTROL:
                     		som_eventos.pula();

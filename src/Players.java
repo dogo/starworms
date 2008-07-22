@@ -59,14 +59,14 @@ class Players {
             int OvalY;
             int OvalX;
             if(player_esq==true) { /**Se o personagem esta na direita, ele inverte o lado da saida do tiro**/ 
-                nomeArq= "player_dir.gif";
+                nomeArq= Main.PLAYER_RIGHT;
                 OvalX = pos_x + size[0]+5;
                 OvalY = pos_y + size[1];
             }
             else {
                 OvalX = pos_x - 5;
                 OvalY = pos_y + size[1];
-                nomeArq= "player_esq.gif";
+                nomeArq= Main.PLAYER_LEFT;
             }
             ImageIcon icon = new ImageIcon(nomeArq);
             Main.Fase.desenhaImage(icon.getImage(),pos[0],pos[1],size[0],size[1]);

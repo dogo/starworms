@@ -20,6 +20,10 @@ public class Main {
     /**    *Armazena todos os obstaculos do jogo    */
     public static KDTree Obstaculos ;
     
+    //Player images
+    public static final String PLAYER_RIGHT = "player_dir.gif";
+    public static final String PLAYER_LEFT = "player_esq.gif";
+    
     public static void main(String[] args){
         Fase = new Tela();
     }

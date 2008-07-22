@@ -13,7 +13,7 @@ public class Movimentacao {
      */
     public void movePlayer(String nomeArq, int px, int py) {
         if(Main.player1.Vez()) {
-            if(nomeArq.equals("player_esq.gif")){
+            if(nomeArq.equals(Main.PLAYER_LEFT)){
             	Main.player1.MudaLado(true,false);
             }
             else {
@@ -39,7 +39,7 @@ public class Movimentacao {
             Main.Fase.repinta(); 
         }
         else {
-            if(nomeArq.equals("player_esq.gif")) {
+            if(nomeArq.equals(Main.PLAYER_LEFT)) {
             	Main.player2.MudaLado(true,false);
             }
             else {
