@@ -31,7 +31,7 @@ public class Tela extends JFrame implements ActionListener {
     private Som musica_fundo = new Som();
     private Som som_eventos = new Som();
     
-    private Image background = Toolkit.getDefaultToolkit().getImage("fundo5.jpg");
+    private Image background = Toolkit.getDefaultToolkit().getImage("images/background.jpg");
     private BorderFactory borda;
     private JPanel jPanel1 = new JPanel();
     private JPanel painelDesenho = new JPanel();
@@ -40,7 +40,6 @@ public class Tela extends JFrame implements ActionListener {
     private JPanel painelDir = new JPanel();    
     private FlowLayout flowLayout1 = new FlowLayout();
     Graphics2D graphic;
-	private Color backgroundColour;
     private JButton ButtonLoad = new JButton();
     private JButton ButtonSave = new JButton();
     private JButton ButtonQuit = new JButton();
